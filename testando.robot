@@ -17,3 +17,11 @@ Caso de Teste 2: Pesquisar sobre o artigo JMeter
     Quando ele clicar no menu "Blog"
     E pesquisar por "JMeter" no campo de busca
     Então deverá ser exibido na tela o artigo referente ao tema buscado 
+
+Caso de Teste 3: Pesquisar por JMeter e limpar texto do campo pesquisar
+    [Tags]    limpar_texto
+    Dado Abrir Site konia.com.br
+    Quando clicar no menu "Blog"
+    E pesquisar pelo texto "JMeter" no campo de busca
+    E apagar texto do campo pesquisar e Digitar "BDD"
+

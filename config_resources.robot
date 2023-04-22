@@ -42,3 +42,14 @@ Então deverá ser exibido na tela o artigo referente ao tema buscado
     Wait Until Page Contains Element    locator=${VALIDAÇAO_ARTIGO}
 
 #Caso de Teste 3      
+Quando clicar no menu "Blog"
+    Click Element    locator=${TITLE_BLOG}     
+E pesquisar pelo texto "${PESQUISA}" no campo de busca
+    Input Text    locator=${CAMPO_PESQUISA}    text=${PESQUISA}    ## text=${PESQUISA} esta passando o texto JMeter     
+E apagar texto do campo pesquisar e Digitar "${PESQUISA}"
+    Clear Element Text    locator=${CAMPO_PESQUISA}
+    Input Text    locator=${CAMPO_PESQUISA}    text=${PESQUISA} 
+    Click Element    locator=${BUTON_PESQUISA}
+Então validar na pagina o texto "Linguagens Naturais: O BDD e a Sintaxe Gherkin"
+    Title Should Be    Linguagens Naturais: O BDD e a Sintaxe Gherkin
+    

@@ -1,144 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1a1 (Python 3.11.2 on win32)" generated="20230422 14:02:08.905" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1a1 (Python 3.11.2 on win32)" generated="20230422 15:01:09.433" rpa="false" schemaversion="4">
 <suite id="s1" name="Testando" source="E:\projeto\Robot\Suite_teste_1-Site-Kone\testando.robot">
-<test id="s1-t1" name="Caso de Teste 1: Acessando o site do Robot" line="8">
+<test id="s1-t1" name="Caso de Teste 3: Pesquisar por JMeter e limpar texto do campo pesquisar" line="21">
 <kw name="Abrir Site" library="config_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230422 14:02:09.229" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230422 14:02:09.229" endtime="20230422 14:02:10.473"/>
+<msg timestamp="20230422 15:01:09.685" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230422 15:01:09.684" endtime="20230422 15:01:10.944"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230422 14:02:10.474" endtime="20230422 14:02:10.607"/>
+<status status="PASS" starttime="20230422 15:01:10.945" endtime="20230422 15:01:11.097"/>
 </kw>
-<status status="PASS" starttime="20230422 14:02:09.229" endtime="20230422 14:02:10.608"/>
+<status status="PASS" starttime="20230422 15:01:09.684" endtime="20230422 15:01:11.097"/>
 </kw>
 <kw name="Dado Abrir Site konia.com.br" library="config_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230422 14:02:10.611" level="INFO">Opening url 'https://konia.com.br/'</msg>
-<status status="PASS" starttime="20230422 14:02:10.610" endtime="20230422 14:02:12.970"/>
+<msg timestamp="20230422 15:01:11.099" level="INFO">Opening url 'https://konia.com.br/'</msg>
+<status status="PASS" starttime="20230422 15:01:11.099" endtime="20230422 15:01:14.480"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Konia Tecnologia - Somos especialistas em Software</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230422 14:02:12.975" level="INFO">Page title is 'Konia Tecnologia - Somos especialistas em Software'.</msg>
-<status status="PASS" starttime="20230422 14:02:12.970" endtime="20230422 14:02:12.975"/>
+<msg timestamp="20230422 15:01:14.490" level="INFO">Page title is 'Konia Tecnologia - Somos especialistas em Software'.</msg>
+<status status="PASS" starttime="20230422 15:01:14.480" endtime="20230422 15:01:14.490"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${BTS_Agendar_reunião}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230422 14:02:13.019" level="INFO">Element '//a[contains(@class,'primary-button button-md br-5')]' is displayed.</msg>
-<status status="PASS" starttime="20230422 14:02:12.975" endtime="20230422 14:02:13.019"/>
+<msg timestamp="20230422 15:01:14.523" level="INFO">Element '//a[contains(@class,'primary-button button-md br-5')]' is displayed.</msg>
+<status status="PASS" starttime="20230422 15:01:14.490" endtime="20230422 15:01:14.523"/>
 </kw>
-<status status="PASS" starttime="20230422 14:02:10.609" endtime="20230422 14:02:13.020"/>
+<status status="PASS" starttime="20230422 15:01:11.098" endtime="20230422 15:01:14.523"/>
 </kw>
-<kw name="Quando ele clicar no menu &quot;Quem Somos&quot;" library="config_resources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=${MENU_QUEM_SOMOS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230422 14:02:13.021" level="INFO">Clicking element '(//a[@href='https://konia.com.br/quem-somos/'][contains(.,'Quem Somos')])[1]'.</msg>
-<status status="PASS" starttime="20230422 14:02:13.021" endtime="20230422 14:02:13.836"/>
-</kw>
-<status status="PASS" starttime="20230422 14:02:13.020" endtime="20230422 14:02:13.836"/>
-</kw>
-<kw name="Então na página deve ter &quot;Somos apaixonados pelo que fazemos&quot;" library="config_resources">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>text=${TITLE_QUEM_SOMOS}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20230422 14:02:13.837" endtime="20230422 14:02:13.860"/>
-</kw>
-<status status="PASS" starttime="20230422 14:02:13.837" endtime="20230422 14:02:13.860"/>
-</kw>
-<tag>menu</tag>
-<status status="PASS" starttime="20230422 14:02:09.228" endtime="20230422 14:02:13.861"/>
-</test>
-<test id="s1-t2" name="Caso de Teste 2: Pesquisar sobre o artigo JMeter" line="14">
-<kw name="Abrir Site" library="config_resources" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230422 14:02:13.867" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230422 14:02:13.867" endtime="20230422 14:02:15.095"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230422 14:02:15.096" endtime="20230422 14:02:15.248"/>
-</kw>
-<status status="PASS" starttime="20230422 14:02:13.865" endtime="20230422 14:02:15.248"/>
-</kw>
-<kw name="Dado Abrir Site konia.com.br" library="config_resources">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230422 14:02:15.252" level="INFO">Opening url 'https://konia.com.br/'</msg>
-<status status="PASS" starttime="20230422 14:02:15.251" endtime="20230422 14:02:17.293"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Konia Tecnologia - Somos especialistas em Software</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230422 14:02:17.304" level="INFO">Page title is 'Konia Tecnologia - Somos especialistas em Software'.</msg>
-<status status="PASS" starttime="20230422 14:02:17.294" endtime="20230422 14:02:17.304"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${BTS_Agendar_reunião}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230422 14:02:17.337" level="INFO">Element '//a[contains(@class,'primary-button button-md br-5')]' is displayed.</msg>
-<status status="PASS" starttime="20230422 14:02:17.304" endtime="20230422 14:02:17.337"/>
-</kw>
-<status status="PASS" starttime="20230422 14:02:15.250" endtime="20230422 14:02:17.337"/>
-</kw>
-<kw name="Quando ele clicar no menu &quot;Blog&quot;" library="config_resources">
+<kw name="Quando clicar no menu &quot;Blog&quot;" library="config_resources">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>locator=${TITLE_BLOG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230422 14:02:17.339" level="INFO">Clicking element '(//a[@href='https://konia.com.br/blog/'][contains(.,'Blog')])[1]'.</msg>
-<status status="PASS" starttime="20230422 14:02:17.338" endtime="20230422 14:02:18.143"/>
+<msg timestamp="20230422 15:01:14.525" level="INFO">Clicking element '(//a[@href='https://konia.com.br/blog/'][contains(.,'Blog')])[1]'.</msg>
+<status status="PASS" starttime="20230422 15:01:14.523" endtime="20230422 15:01:15.660"/>
 </kw>
-<status status="PASS" starttime="20230422 14:02:17.338" endtime="20230422 14:02:18.143"/>
+<status status="PASS" starttime="20230422 15:01:14.523" endtime="20230422 15:01:15.660"/>
 </kw>
-<kw name="E pesquisar por &quot;JMeter&quot; no campo de busca" library="config_resources" sourcename="E pesquisar por &quot;${PESQUISA}&quot; no campo de busca">
+<kw name="E pesquisar pelo texto &quot;JMeter&quot; no campo de busca" library="config_resources" sourcename="E pesquisar pelo texto &quot;${PESQUISA}&quot; no campo de busca">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=${CAMPO_PESQUISA}</arg>
 <arg>text=${PESQUISA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230422 14:02:18.145" level="INFO">Typing text 'JMeter' into text field '//input[@type='search'][contains(@id,'input-1')]'.</msg>
-<status status="PASS" starttime="20230422 14:02:18.144" endtime="20230422 14:02:18.276"/>
+<msg timestamp="20230422 15:01:15.663" level="INFO">Typing text 'JMeter' into text field '//input[@type='search'][contains(@id,'input-1')]'.</msg>
+<status status="PASS" starttime="20230422 15:01:15.661" endtime="20230422 15:01:15.874"/>
+</kw>
+<status status="PASS" starttime="20230422 15:01:15.661" endtime="20230422 15:01:15.874"/>
+</kw>
+<kw name="E apagar texto do campo pesquisar e Digitar &quot;BDD&quot;" library="config_resources" sourcename="E apagar texto do campo pesquisar e Digitar &quot;${PESQUISA}&quot;">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>locator=${CAMPO_PESQUISA}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230422 15:01:15.876" endtime="20230422 15:01:15.974"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${CAMPO_PESQUISA}</arg>
+<arg>text=${PESQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230422 15:01:15.976" level="INFO">Typing text 'BDD' into text field '//input[@type='search'][contains(@id,'input-1')]'.</msg>
+<status status="PASS" starttime="20230422 15:01:15.975" endtime="20230422 15:01:16.091"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>locator=${BUTON_PESQUISA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230422 14:02:18.276" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Pesquisar')]'.</msg>
-<status status="PASS" starttime="20230422 14:02:18.276" endtime="20230422 14:02:19.068"/>
+<msg timestamp="20230422 15:01:16.092" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Pesquisar')]'.</msg>
+<status status="PASS" starttime="20230422 15:01:16.091" endtime="20230422 15:01:17.045"/>
 </kw>
-<status status="PASS" starttime="20230422 14:02:18.144" endtime="20230422 14:02:19.068"/>
+<status status="PASS" starttime="20230422 15:01:15.875" endtime="20230422 15:01:17.046"/>
 </kw>
-<kw name="Então deverá ser exibido na tela o artigo referente ao tema buscado" library="config_resources">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>locator=${VALIDAÇAO_ARTIGO}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20230422 14:02:19.070" endtime="20230422 14:02:19.087"/>
-</kw>
-<status status="PASS" starttime="20230422 14:02:19.069" endtime="20230422 14:02:19.087"/>
-</kw>
-<tag>busca_artigos</tag>
-<status status="PASS" starttime="20230422 14:02:13.863" endtime="20230422 14:02:19.088"/>
+<tag>limpar_texto</tag>
+<status status="PASS" starttime="20230422 15:01:09.683" endtime="20230422 15:01:17.047"/>
 </test>
-<status status="PASS" starttime="20230422 14:02:08.907" endtime="20230422 14:02:19.090"/>
+<status status="PASS" starttime="20230422 15:01:09.435" endtime="20230422 15:01:17.053"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">busca_artigos</stat>
-<stat pass="1" fail="0" skip="0">menu</stat>
+<stat pass="1" fail="0" skip="0">limpar_texto</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Testando">Testando</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testando">Testando</stat>
 </suite>
 </statistics>
 <errors>
